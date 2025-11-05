@@ -1,6 +1,6 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { App } from './app';
 import { HeaderComponent } from "./header/header.component";
@@ -15,6 +15,7 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { RecipeService } from './recipes/recipe.service';
 
 @NgModule({
   declarations: [
@@ -33,11 +34,13 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
 ],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    ShoppingListService
+    ShoppingListService,
+    RecipeService
   ],
   bootstrap: [App]
 })
