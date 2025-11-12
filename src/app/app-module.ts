@@ -1,6 +1,7 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { App } from './app';
 import { HeaderComponent } from "./header/header.component";
@@ -35,7 +36,8 @@ import { RecipeService } from './recipes/recipe.service';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
 ],
   providers: [
     provideBrowserGlobalErrorListeners(),
